@@ -66,3 +66,21 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+
+@import "tailwindcss";
+
+@layer base {
+
+  /* *,
+  *::before,
+  *::after {
+    padding: 0;
+    box-sizing: border-box;
+  } */
+
+  html,
+  body,
+  #root {
+    width: 100%;
+  }
+}
