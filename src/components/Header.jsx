@@ -12,11 +12,13 @@ import {
 const Header = () => {
     const [shopOpen, setShopOpen] = useState(false);
     const [productOpen, setProductOpen] = useState(false);
+    const [blogOpen, setBlogOpen] = useState(false);
 
     // Close all menus
     const closeAllMenus = () => {
         setShopOpen(false);
         setProductOpen(false);
+        setBlogOpen(false);
     };
 
     return (
@@ -63,7 +65,7 @@ const Header = () => {
                         {/* Shop with Mega Menu */}
                         <li
                             className="cursor-pointer hover:text-[#AE3F4F] flex items-center gap-1"
-                            onMouseEnter={() => { setShopOpen(true); setProductOpen(false); }}
+                            onMouseEnter={() => { setShopOpen(true); setProductOpen(false); setBlogOpen(false); }}
                         >
                             Shop <span className="text-[10px]">▼</span>
                         </li>
@@ -71,12 +73,17 @@ const Header = () => {
                         {/* Product with Mega Menu */}
                         <li
                             className="cursor-pointer hover:text-[#AE3F4F] flex items-center gap-1"
-                            onMouseEnter={() => { setProductOpen(true); setShopOpen(false); }}
+                            onMouseEnter={() => { setProductOpen(true); setShopOpen(false); setBlogOpen(false); }}
                         >
                             Product <span className="text-[10px]">▼</span>
                         </li>
 
-                        <li className="cursor-pointer hover:text-[#AE3F4F] flex items-center gap-1">Blog <span className="text-[10px]">▼</span></li>
+                        <li
+                            className="cursor-pointer hover:text-[#AE3F4F] flex items-center gap-1"
+                            onMouseEnter={() => { setBlogOpen(true); setShopOpen(false); setProductOpen(false); }}
+                        >
+                            Blog <span className="text-[10px]">▼</span>
+                        </li>
                         <li className="cursor-pointer hover:text-[#AE3F4F] flex items-center gap-1">Pages <span className="text-[10px]">▼</span></li>
                         <li className="relative cursor-pointer hover:text-[#AE3F4F]">
                             Buy Now
@@ -263,6 +270,67 @@ const Header = () => {
                                                 </svg>
                                             </button>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )}
+
+                {/* Blog Mega Menu */}
+                {blogOpen && (
+                    <div className="absolute top-full left-0 w-full bg-white shadow-xl z-50 border-t">
+                        <div className="max-w-7xl mx-auto px-6 py-8 grid grid-cols-4 gap-6">
+
+                            <div>
+                                <h4 className="font-bold mb-3">List Layout</h4>
+                                <ul className="space-y-2 text-sm text-gray-500 font-normal">
+                                    <li className="hover:text-[#AE3F4F] cursor-pointer">List Left Sidebar</li>
+                                    <li className="hover:text-[#AE3F4F] cursor-pointer">List Right Sidebar</li>
+                                    <li className="hover:text-[#AE3F4F] cursor-pointer">List Item Basic</li>
+                                    <li className="hover:text-[#AE3F4F] cursor-pointer">List Item Overlay</li>
+                                    <li className="hover:text-[#AE3F4F] cursor-pointer">List Item Box</li>
+                                    <li className="hover:text-[#AE3F4F] cursor-pointer">List Item Classic</li>
+                                    <li className="hover:text-[#AE3F4F] cursor-pointer">List Item Classic Box</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h4 className="font-bold mb-3">Grid Layout</h4>
+                                <ul className="space-y-2 text-sm text-gray-500 font-normal">
+                                    <li className="hover:text-[#AE3F4F] cursor-pointer">Grid Left Sidebar</li>
+                                    <li className="hover:text-[#AE3F4F] cursor-pointer">Grid Right Sidebar</li>
+                                    <li className="hover:text-[#AE3F4F] cursor-pointer">Grid Item Basic</li>
+                                    <li className="hover:text-[#AE3F4F] cursor-pointer">Grid Item Overlay</li>
+                                    <li className="hover:text-[#AE3F4F] cursor-pointer">Grid Item Box</li>
+                                    <li className="hover:text-[#AE3F4F] cursor-pointer">Grid Item Classic</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h4 className="font-bold mb-3">Article</h4>
+                                <ul className="space-y-2 text-sm text-gray-500 font-normal">
+                                    <li className="hover:text-[#AE3F4F] cursor-pointer">Title in image</li>
+                                    <li className="hover:text-[#AE3F4F] cursor-pointer">Title after image</li>
+                                    <li className="hover:text-[#AE3F4F] cursor-pointer">Title before image</li>
+                                    <li className="hover:text-[#AE3F4F] cursor-pointer">Left Sidebar</li>
+                                    <li className="hover:text-[#AE3F4F] cursor-pointer">Right Sidebar</li>
+                                    <li className="hover:text-[#AE3F4F] cursor-pointer">Title Center</li>
+                                    <li className="hover:text-[#AE3F4F] cursor-pointer">Article Video</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <div className="rounded-lg overflow-hidden">
+                                    <img
+                                        src="https://qx-shooz.myshopify.com/cdn/shop/files/filler1.png?v=1731501348&width=540"
+                                        alt="Blog Promo"
+                                        className="w-full h-44 object-cover rounded-lg"
+                                    />
+                                    <div className="mt-4">
+                                        <h4 className="font-bold text-lg">Enjoy a 50% Price Slash</h4>
+                                        <p className="text-sm text-gray-500 mt-1">Revamp Your Wardrobe at Jaw-Dropping Prices.</p>
+                                        <a href="#" className="inline-block mt-3 text-sm font-semibold text-gray-800 underline underline-offset-4 hover:text-[#AE3F4F]">SHOP NOW</a>
                                     </div>
                                 </div>
                             </div>
