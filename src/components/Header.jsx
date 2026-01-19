@@ -6,13 +6,29 @@ import {
     AiOutlineShopping,
     AiOutlineFacebook,
     AiOutlineTwitter,
-    AiOutlineInstagram
+    AiOutlineInstagram,
+    AiOutlineMenu,
+    AiOutlineClose,
+    AiOutlinePlus,
+    AiOutlineMinus
 } from 'react-icons/ai';
 
 const Header = () => {
     const [shopOpen, setShopOpen] = useState(false);
     const [productOpen, setProductOpen] = useState(false);
     const [blogOpen, setBlogOpen] = useState(false);
+
+    // Mobile menu states
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [mobileShopOpen, setMobileShopOpen] = useState(false);
+    const [mobileProductOpen, setMobileProductOpen] = useState(false);
+    const [mobileBlogOpen, setMobileBlogOpen] = useState(false);
+    const [mobilePagesOpen, setMobilePagesOpen] = useState(false);
+
+    // Nested submenu states for Shop
+    const [mobileLayoutOpen, setMobileLayoutOpen] = useState(false);
+    const [mobileFeaturesOpen, setMobileFeaturesOpen] = useState(false);
+    const [mobileHoverStyleOpen, setMobileHoverStyleOpen] = useState(false);
 
     // Close all menus
     const closeAllMenus = () => {
@@ -36,8 +52,8 @@ const Header = () => {
                 </div>
             </div>
 
-            {/* Secondary Bar */}
-            <div className="border-b border-gray-200 py-4">
+            {/* Secondary Bar - Hidden on mobile */}
+            <div className="hidden lg:block border-b border-gray-200 py-4">
                 <div className="max-w-7xl mx-auto px-6 flex justify-between items-center text-xs text-gray-600">
                     <span className="underline decoration-yellow-400 decoration-2 underline-offset-2">One Day Delivery Available</span>
                     <div className="flex items-center gap-6">
@@ -53,10 +69,16 @@ const Header = () => {
 
             {/* Main Nav */}
             <nav className="relative bg-white shadow-sm" onMouseLeave={closeAllMenus}>
-                <div className="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
+                <div className="max-w-7xl mx-auto px-4 lg:px-6 py-4 lg:py-6 flex justify-between items-center">
+
+                    {/* Mobile: Hamburger + Search */}
+                    <div className="flex lg:hidden items-center gap-3 text-xl text-gray-700">
+                        <AiOutlineMenu className="cursor-pointer hover:text-[#AE3F4F]" onClick={() => setMobileMenuOpen(true)} />
+                        <AiOutlineSearch className="cursor-pointer hover:text-[#AE3F4F]" />
+                    </div>
 
                     {/* Logo */}
-                    <div><a href="#"><img src="https://qx-shooz.myshopify.com/cdn/shop/files/logo.png?v=1731409697&width=250" className="w-32" alt="" /></a></div>
+                    <div><a href="#"><img src="https://qx-shooz.myshopify.com/cdn/shop/files/logo.png?v=1731409697&width=250" className="w-28 lg:w-32" alt="" /></a></div>
 
                     {/* Menu */}
                     <ul className="hidden lg:flex items-center gap-8 font-medium text-gray-800">
@@ -92,8 +114,8 @@ const Header = () => {
                     </ul>
 
                     {/* Icons */}
-                    <div className="flex items-center gap-5 text-xl text-gray-700">
-                        <AiOutlineSearch className="cursor-pointer hover:text-[#AE3F4F]" />
+                    <div className="flex items-center gap-3 lg:gap-5 text-xl text-gray-700">
+                        <AiOutlineSearch className="hidden lg:block cursor-pointer hover:text-[#AE3F4F]" />
                         <AiOutlineUser className="cursor-pointer hover:text-[#AE3F4F]" />
                         <div className="relative">
                             <AiOutlineHeart className="cursor-pointer hover:text-[#AE3F4F]" />
@@ -337,6 +359,167 @@ const Header = () => {
                         </div>
                     </div>
                 )}
+
+                {/* Mobile Offcanvas Menu */}
+                <div className={`lg:hidden fixed inset-0 z-50 transition-opacity duration-300 ${mobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+                    {/* Backdrop */}
+                    <div className="absolute inset-0 bg-black/30" onClick={() => setMobileMenuOpen(false)}></div>
+
+                    {/* Offcanvas Panel */}
+                    <div className={`absolute top-0 left-0 h-full w-80 bg-white shadow-xl transform transition-transform duration-300 ${mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+                        {/* Close Button */}
+                        <div className="flex justify-end p-4">
+                            <AiOutlineClose className="text-xl cursor-pointer hover:text-[#AE3F4F]" onClick={() => setMobileMenuOpen(false)} />
+                        </div>
+
+                        {/* Menu Items */}
+                        <div className="px-6 overflow-y-auto" style={{ maxHeight: 'calc(100vh - 80px)' }}>
+                            {/* Home */}
+                            <div className="py-4 border-b border-gray-200">
+                                <span className="font-medium text-gray-800 cursor-pointer hover:text-[#AE3F4F]">Home</span>
+                            </div>
+
+                            {/* Shop Accordion */}
+                            <div className="border-b border-gray-200">
+                                <div className="py-4 flex justify-between items-center cursor-pointer" onClick={() => setMobileShopOpen(!mobileShopOpen)}>
+                                    <span className="font-medium text-gray-800">Shop</span>
+                                    {mobileShopOpen ? <AiOutlineMinus className="text-gray-500" /> : <AiOutlinePlus className="text-gray-500" />}
+                                </div>
+                                {mobileShopOpen && (
+                                    <div className="pl-4 pb-4 space-y-2">
+                                        {/* Layout Nested Accordion */}
+                                        <div>
+                                            <div className="flex justify-between items-center text-gray-600 text-sm cursor-pointer py-2" onClick={() => setMobileLayoutOpen(!mobileLayoutOpen)}>
+                                                <span>Layout</span>
+                                                {mobileLayoutOpen ? <AiOutlineMinus className="text-gray-400" /> : <AiOutlinePlus className="text-gray-400" />}
+                                            </div>
+                                            {mobileLayoutOpen && (
+                                                <div className="pl-4 py-2 space-y-3 text-gray-500 text-sm">
+                                                    <div className="cursor-pointer hover:text-[#AE3F4F]">1. Filter Sidebar</div>
+                                                    <div className="cursor-pointer hover:text-[#AE3F4F]">2. Filter Top</div>
+                                                    <div className="cursor-pointer hover:text-[#AE3F4F]">3. Filter Drawer</div>
+                                                    <div className="cursor-pointer hover:text-[#AE3F4F]">4. Without Filter</div>
+                                                    <div className="cursor-pointer hover:text-[#AE3F4F]">5. Collection - 2 columns</div>
+                                                    <div className="cursor-pointer hover:text-[#AE3F4F]">6. Collection - 3 columns</div>
+                                                    <div className="cursor-pointer hover:text-[#AE3F4F]">7. Collection - 4 columns</div>
+                                                </div>
+                                            )}
+                                        </div>
+
+                                        {/* Features Nested Accordion */}
+                                        <div>
+                                            <div className="flex justify-between items-center text-gray-600 text-sm cursor-pointer py-2" onClick={() => setMobileFeaturesOpen(!mobileFeaturesOpen)}>
+                                                <span>Features</span>
+                                                {mobileFeaturesOpen ? <AiOutlineMinus className="text-gray-400" /> : <AiOutlinePlus className="text-gray-400" />}
+                                            </div>
+                                            {mobileFeaturesOpen && (
+                                                <div className="pl-4 py-2 space-y-3 text-gray-500 text-sm">
+                                                    <div className="cursor-pointer hover:text-[#AE3F4F]">Banner Image</div>
+                                                    <div className="cursor-pointer hover:text-[#AE3F4F]">Banner No Image</div>
+                                                    <div className="cursor-pointer hover:text-[#AE3F4F]">Banner Split</div>
+                                                    <div className="cursor-pointer hover:text-[#AE3F4F]">Collection list</div>
+                                                    <div className="cursor-pointer hover:text-[#AE3F4F]">Sub Collection</div>
+                                                    <div className="cursor-pointer hover:text-[#AE3F4F]">Pagination</div>
+                                                    <div className="cursor-pointer hover:text-[#AE3F4F]">Infinity</div>
+                                                    <div className="cursor-pointer hover:text-[#AE3F4F]">Load More</div>
+                                                </div>
+                                            )}
+                                        </div>
+
+                                        {/* Hover Style Nested Accordion */}
+                                        <div>
+                                            <div className="flex justify-between items-center text-gray-600 text-sm cursor-pointer py-2" onClick={() => setMobileHoverStyleOpen(!mobileHoverStyleOpen)}>
+                                                <span>Hover Style</span>
+                                                {mobileHoverStyleOpen ? <AiOutlineMinus className="text-gray-400" /> : <AiOutlinePlus className="text-gray-400" />}
+                                            </div>
+                                            {mobileHoverStyleOpen && (
+                                                <div className="pl-4 py-2 space-y-3 text-gray-500 text-sm">
+                                                    <div className="cursor-pointer hover:text-[#AE3F4F]">Hover Style 1</div>
+                                                    <div className="cursor-pointer hover:text-[#AE3F4F]">Hover Style 2</div>
+                                                    <div className="cursor-pointer hover:text-[#AE3F4F]">Hover Style 3</div>
+                                                    <div className="cursor-pointer hover:text-[#AE3F4F]">Hover Style 4</div>
+                                                    <div className="cursor-pointer hover:text-[#AE3F4F]">Hover Style 5</div>
+                                                    <div className="cursor-pointer hover:text-[#AE3F4F]">Hover Style 6</div>
+                                                    <div className="cursor-pointer hover:text-[#AE3F4F]">Hover Style 7</div>
+                                                    <div className="cursor-pointer hover:text-[#AE3F4F]">Hover Style 8</div>
+                                                </div>
+                                            )}
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+
+                            {/* Product Accordion */}
+                            <div className="border-b border-gray-200">
+                                <div className="py-4 flex justify-between items-center cursor-pointer" onClick={() => setMobileProductOpen(!mobileProductOpen)}>
+                                    <span className="font-medium text-gray-800">Product</span>
+                                    {mobileProductOpen ? <AiOutlineMinus className="text-gray-500" /> : <AiOutlinePlus className="text-gray-500" />}
+                                </div>
+                                {mobileProductOpen && (
+                                    <div className="pl-4 pb-4 space-y-3 text-gray-600 text-sm">
+                                        <div className="cursor-pointer hover:text-[#AE3F4F]">Product Layouts</div>
+                                        <div className="cursor-pointer hover:text-[#AE3F4F]">Product Type</div>
+                                        <div className="cursor-pointer hover:text-[#AE3F4F]">List Featured 1</div>
+                                        <div className="cursor-pointer hover:text-[#AE3F4F]">List Featured 2</div>
+                                    </div>
+                                )}
+                            </div>
+
+                            {/* Blog Accordion */}
+                            <div className="border-b border-gray-200">
+                                <div className="py-4 flex justify-between items-center cursor-pointer" onClick={() => setMobileBlogOpen(!mobileBlogOpen)}>
+                                    <span className="font-medium text-gray-800">Blog</span>
+                                    {mobileBlogOpen ? <AiOutlineMinus className="text-gray-500" /> : <AiOutlinePlus className="text-gray-500" />}
+                                </div>
+                                {mobileBlogOpen && (
+                                    <div className="pl-4 pb-4 space-y-3 text-gray-600 text-sm">
+                                        <div className="cursor-pointer hover:text-[#AE3F4F]">List Layout</div>
+                                        <div className="cursor-pointer hover:text-[#AE3F4F]">Grid Layout</div>
+                                        <div className="cursor-pointer hover:text-[#AE3F4F]">Article</div>
+                                    </div>
+                                )}
+                            </div>
+
+                            {/* Pages Accordion */}
+                            <div className="border-b border-gray-200">
+                                <div className="py-4 flex justify-between items-center cursor-pointer" onClick={() => setMobilePagesOpen(!mobilePagesOpen)}>
+                                    <span className="font-medium text-gray-800">Pages</span>
+                                    {mobilePagesOpen ? <AiOutlineMinus className="text-gray-500" /> : <AiOutlinePlus className="text-gray-500" />}
+                                </div>
+                                {mobilePagesOpen && (
+                                    <div className="pl-4 pb-4 space-y-3 text-gray-600 text-sm">
+                                        <div className="cursor-pointer hover:text-[#AE3F4F]">About Us</div>
+                                        <div className="cursor-pointer hover:text-[#AE3F4F]">Contact</div>
+                                        <div className="cursor-pointer hover:text-[#AE3F4F]">FAQ</div>
+                                    </div>
+                                )}
+                            </div>
+
+                            {/* Buy Now */}
+                            <div className="py-4 border-b border-gray-200 flex items-center gap-2">
+                                <span className="font-medium text-gray-800 cursor-pointer hover:text-[#AE3F4F]">Buy Now</span>
+                                <span className="bg-green-500 text-white text-[9px] px-1.5 py-0.5 rounded">Sale</span>
+                            </div>
+
+                            {/* Login / Register */}
+                            <div className="py-4 border-b border-gray-200">
+                                <span className="text-gray-600 text-sm cursor-pointer">Login <span className="mx-1">/</span> Register</span>
+                            </div>
+
+                            {/* Currency & Language */}
+                            <div className="py-4 flex items-center gap-4 text-sm text-gray-600">
+                                <div className="flex items-center gap-1 cursor-pointer">
+                                    <span>AUD $</span>
+                                    <span className="text-xs">▼</span>
+                                </div>
+                                <div className="flex items-center gap-1 cursor-pointer">
+                                    <span>English</span>
+                                    <span className="text-xs">▼</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </nav>
         </header>
     );
