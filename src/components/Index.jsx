@@ -451,6 +451,104 @@ const Index = () => {
                     }
                 `}</style>
             </section>
+
+            {/* Boots & Booties Section */}
+            <section className="py-12 md:py-16 lg:py-20 bg-white">
+                <div className="max-w-7xl mx-auto px-6">
+                    {/* Section Header */}
+                    <div className="text-center mb-10">
+                        <span className="text-gray-500 text-[12px] font-medium uppercase tracking-[0.3em] mb-3 block">
+                            STYLISH AND COMFORTABLE FOR EVERY SEASON
+                        </span>
+                        <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+                            Boots & Booties
+                        </h2>
+                        <p className="text-gray-500 text-sm max-w-md mx-auto">
+                            Check out our collection of the top New Products<br />
+                            that encourage conversion.
+                        </p>
+                    </div>
+
+                    {/* Category Grid */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {/* Athletic Footwear Card */}
+                        <div className="group cursor-pointer">
+                            <div className="relative overflow-hidden rounded-md mb-4">
+                                <div className="aspect-square min-h-[320px] overflow-hidden">
+                                    <img
+                                        src="https://qx-shooz.myshopify.com/cdn/shop/collections/col-5.png?v=1731658002&width=360"
+                                        alt="Athletic Footwear"
+                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    />
+                                </div>
+                                {/* Button at bottom */}
+                                <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2">
+                                    <button className="bg-white text-gray-900 text-xl font-semibold px-8 py-3  whitespace-nowrap transition-all duration-300 group-hover:bg-[#AE3F4F] group-hover:text-white cursor-pointer">
+                                        Athletic Footwear <span className="ml-1">8</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Luxury Leather Shoes Card */}
+                        <div className="group cursor-pointer">
+                            <div className="relative overflow-hidden rounded-md mb-4">
+                                <div className="aspect-square min-h-[320px] overflow-hidden">
+                                    <img
+                                        src="https://qx-shooz.myshopify.com/cdn/shop/collections/col-6.png?v=1731658012&width=360"
+                                        alt="Luxury Leather Shoes"
+                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    />
+                                </div>
+                                {/* Button at bottom */}
+                                <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2">
+                                    <button className="bg-white text-gray-900 text-xl font-semibold px-8 py-3  whitespace-nowrap transition-all duration-300 group-hover:bg-[#AE3F4F] group-hover:text-white cursor-pointer">
+                                        Luxury Leather Shoes <span className="ml-1">8</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Sustainable Footwear Card */}
+                        <div className="group cursor-pointer">
+                            <div className="relative overflow-hidden rounded-md mb-4">
+                                <div className="aspect-square min-h-[320px] overflow-hidden">
+                                    <img
+                                        src="https://qx-shooz.myshopify.com/cdn/shop/collections/col-1.png?v=1731657959&width=360"
+                                        alt="Sustainable Footwear"
+                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    />
+                                </div>
+                                {/* Button at bottom */}
+                                <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2">
+                                    <button className="bg-white text-gray-900 text-xl font-semibold px-8 py-3  whitespace-nowrap transition-all duration-300 group-hover:bg-[#AE3F4F] group-hover:text-white cursor-pointer">
+                                        Sustainable Footwear <span className="ml-1">8</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Sandals & Slides Card */}
+                        <div className="group cursor-pointer">
+                            <div className="relative overflow-hidden rounded-md mb-4">
+                                <div className="aspect-square min-h-[320px] overflow-hidden">
+                                    <img
+                                        src="https://qx-shooz.myshopify.com/cdn/shop/collections/col-2.png?v=1731657969&width=360"
+                                        alt="Sandals & Slides"
+                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    />
+                                </div>
+                                {/* Button at bottom */}
+                                <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2">
+                                    <button className="bg-white text-gray-900 text-xl font-semibold px-8 py-3 whitespace-nowrap transition-all duration-300 group-hover:bg-[#AE3F4F] group-hover:text-white cursor-pointer">
+                                        Sandals & Slides <span className="ml-1">8</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </>
     );
 };
