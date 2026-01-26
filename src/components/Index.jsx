@@ -460,7 +460,7 @@ const Index = () => {
                         <span className="text-gray-500 text-[12px] font-medium uppercase tracking-[0.3em] mb-3 block">
                             STYLISH AND COMFORTABLE FOR EVERY SEASON
                         </span>
-                        <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+                        <h2 className="text-3xl md:text-5xl font-medium text-gray-900 mb-4">
                             Boots & Booties
                         </h2>
                         <p className="text-gray-500 text-sm max-w-md mx-auto">
@@ -544,6 +544,188 @@ const Index = () => {
                                         Sandals & Slides <span className="ml-1">8</span>
                                     </button>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Timeless styles for everyday Section */}
+            <section className='py-12 md:py-16 lg:py-20 bg-[#333333]'>
+                <div className="max-w-7xl mx-auto px-6">
+                    {/* Section Header */}
+                    <div className="text-center mb-10">
+                        <span className="text-white text-[12px] font-medium uppercase tracking-[0.3em] mb-3 block">
+                            FASHION SNEAKERS
+                        </span>
+                        <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
+                            Timeless styles for everyday wear
+                        </h2>
+                        <p className="text-white text-sm max-w-md mx-auto">
+                            High-performance footwear for sports and <br /> workouts
+                        </p>
+                    </div>
+
+                    {/* Top Cards */}
+                    <div className='flex flex-col md:flex-row gap-6'>
+                        {/* First Card */}
+                        <div className='group relative h-72 overflow-hidden cursor-pointer'>
+                            <img className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-110' src="https://qx-shooz.myshopify.com/cdn/shop/files/five-col-banner-1.png?v=1731045532&width=1920" alt="" />
+                            <div className='absolute bottom-12 left-5'>
+                                <p className='text-white text-[9px] font-medium uppercase tracking-[0.3em] mb-3 block'>COMFORT MEETS FASHION</p>
+                                <h3 className='text-white text-2xl font-bold mb-3'>Discover shoes <br /> that look great</h3>
+                                <a href="#" className='text-white text-[12px] font-medium uppercase tracking-[0.3em] mb-3 block'>Shop Now</a>
+                            </div>
+                        </div>
+
+                        {/* Second Card */}
+                        <div className='group relative h-72 overflow-hidden cursor-pointer'>
+                            <img className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-110' src="https://qx-shooz.myshopify.com/cdn/shop/files/five-col-banner-2.png?v=1731045532&width=1920" alt="" />
+                            <div className='absolute bottom-12 left-5'>
+                                <p className='text-white text-[9px] font-medium uppercase tracking-[0.3em] mb-3 block'>ELEVATE YOUR LOOK</p>
+                                <h3 className='text-white text-2xl font-bold mb-3'>Find the perfectpair of <br /> Shoes</h3>
+                                <a href="#" className='text-white text-[12px] font-medium uppercase tracking-[0.3em] mb-3 block'>Shop Now</a>
+                            </div>
+                        </div>
+
+                        {/* Third Card */}
+                        <div className='group relative h-72 overflow-hidden cursor-pointer'>
+                            <img className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-110' src="https://qx-shooz.myshopify.com/cdn/shop/files/five-col-banner-3.png?v=1731045526&width=1920" alt="" />
+                            <div className='absolute bottom-12 left-5'>
+                                <p className='text-white text-[9px] font-medium uppercase tracking-[0.3em] mb-3 block'>STEP INTO STYLE</p>
+                                <h3 className='text-white text-2xl font-bold mb-3'>The latest trends in <br /> footwear</h3>
+                                <a href="#" className='text-white text-[12px] font-medium uppercase tracking-[0.3em] mb-3 block'>Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Bottom Card */}
+                    <div className='flex flex-col justify-between mt-8 md:flex-row gap-6'>
+                        {/* First Card */}
+                        <div className='group relative h-80 overflow-hidden cursor-pointer'>
+                            <img className='w-150 h-full object-cover transition-transform duration-500 group-hover:scale-110' src="https://qx-shooz.myshopify.com/cdn/shop/files/five-col-banner-4.png?v=1731045517&width=1920" alt="" />
+                            <div className='absolute bottom-12 left-5'>
+                                <p className='text-white text-[9px] font-medium uppercase tracking-[0.3em] mb-3 block'>SHOP BY BRAND</p>
+                                <h3 className='text-white text-3xl font-bold mb-3'>Find your favorites <br /> brands and styles</h3>
+                                <a href="#" className='text-white text-[12px] font-medium uppercase tracking-[0.3em] mb-3 block'>Shop Now</a>
+                            </div>
+                        </div>
+
+                        {/* Second Card */}
+                        <div className='group relative h-80 overflow-hidden cursor-pointer'>
+                            <img className='w-150 h-full object-cover transition-transform duration-500 group-hover:scale-110' src="https://qx-shooz.myshopify.com/cdn/shop/files/five-col-banner-5.png?v=1731045518&width=1920" alt="" />
+                            <div className='absolute bottom-12 left-5'>
+                                <p className='text-white text-[9px] font-medium uppercase tracking-[0.3em] mb-3 block'>SALE AND CLEARANCE</p>
+                                <h3 className='text-white text-3xl font-bold mb-3'>Shop our latest deals <br /> and discounts</h3>
+                                <a href="#" className='text-white text-[12px] font-medium uppercase tracking-[0.3em] mb-3 block'>Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Huge discounts Section */}
+            <section className='py-12 md:py-16 lg:py-20 bg-white'>
+                <div className="max-w-7xl mx-auto px-6">
+                    {/* Section Header */}
+                    <div className="text-center mb-10">
+                        <span className="text-gray-500 text-[10px] font-medium uppercase tracking-[0.3em] mb-3 block">
+                            SEASONS'S END SALE
+                        </span>
+                        <h2 className="text-3xl md:text-5xl font-medium text-black mb-4">
+                            Huge discounts on last season's styles
+                        </h2>
+                        <p className="text-gray-500 text-sm max-w-md mx-auto">
+                            Himenaeos nascetur tristique consequat mus ad. <br /> Accumsan fringilla in laoreet id bibendum et.
+                        </p>
+                    </div>
+
+                    {/* Column 1 */}
+                    <div className="flex flex-col md:flex-row justify-evenly gap-8 mt-8">
+                        {/* Card 1 */}
+                        <div className="flex items-center gap-4 border-b border-gray-300 pb-4">
+                            <img src="https://qx-shooz.myshopify.com/cdn/shop/files/product-4_a9f5532a-47cd-4f32-8958-57ee765f0a27.jpg?v=1731311278&width=150" className="w-18 h-18 object-contain" />
+                            <div>
+                                <h3 className="font-medium">Classic White Tennis Sneakers</h3>
+                                <p className="text-sm text-gray-500">$25.00</p>
+                            </div>
+                        </div>
+
+                        {/* Card 2 */}
+                        <div className="flex items-center gap-4 border-b border-gray-300 pb-4">
+                            <img src="https://qx-shooz.myshopify.com/cdn/shop/files/product-4_a9f5532a-47cd-4f32-8958-57ee765f0a27.jpg?v=1731311278&width=150" className="w-18 h-18 object-contain" />
+                            <div>
+                                <h3 className="font-medium">Classic White Tennis Sneakers</h3>
+                                <p className="text-sm text-gray-500">$25.00</p>
+                            </div>
+                        </div>
+
+                        {/* Card 3 */}
+                        <div className="flex items-center gap-4 border-b border-gray-300 pb-4">
+                            <img src="https://qx-shooz.myshopify.com/cdn/shop/files/product-4_a9f5532a-47cd-4f32-8958-57ee765f0a27.jpg?v=1731311278&width=150" className="w-18 h-18 object-contain" />
+                            <div>
+                                <h3 className="font-medium">Classic White Tennis Sneakers</h3>
+                                <p className="text-sm text-gray-500">$25.00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Column 2 */}
+                    <div className="flex flex-col md:flex-row justify-evenly gap-8 mt-8">
+                        {/* Card 1 */}
+                        <div className="flex items-center gap-4 border-b border-gray-300 pb-4">
+                            <img src="https://qx-shooz.myshopify.com/cdn/shop/files/product-17.jpg?v=1731315215&width=150" className="w-18 h-18 object-contain" />
+                            <div>
+                                <h3 className="font-medium">Waterproof Hiking Boots</h3>
+                                <p className="text-sm text-gray-500">$25.00</p>
+                            </div>
+                        </div>
+
+                        {/* Card 2 */}
+                        <div className="flex items-center gap-4 border-b border-gray-300 pb-4">
+                            <img src="https://qx-shooz.myshopify.com/cdn/shop/files/product-17.jpg?v=1731315215&width=150" className="w-18 h-18 object-contain" />
+                            <div>
+                                <h3 className="font-medium">Waterproof Hiking Boots</h3>
+                                <p className="text-sm text-gray-500">$25.00</p>
+                            </div>
+                        </div>
+
+                        {/* Card 3 */}
+                        <div className="flex items-center gap-4 border-b border-gray-300 pb-4">
+                            <img src="https://qx-shooz.myshopify.com/cdn/shop/files/product-17.jpg?v=1731315215&width=150" className="w-18 h-18 object-contain" />
+                            <div>
+                                <h3 className="font-medium">Waterproof Hiking Boots</h3>
+                                <p className="text-sm text-gray-500">$25.00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Column 3 */}
+                    <div className="flex flex-col md:flex-row justify-evenly gap-8 mt-8">
+                        {/* Card 1 */}
+                        <div className="flex items-center gap-4 border-b border-gray-300 pb-4">
+                            <img src="https://qx-shooz.myshopify.com/cdn/shop/files/product-3_be4a38ab-621f-46d5-a126-3488687e10f6.jpg?v=1731311211&width=150" className="w-18 h-18 object-contain" />
+                            <div>
+                                <h3 className="font-medium">Classic Leather Sneakers</h3>
+                                <p className="text-sm text-gray-500">$21.00</p>
+                            </div>
+                        </div>
+
+                        {/* Card 2 */}
+                        <div className="flex items-center gap-4 border-b border-gray-300 pb-4">
+                            <img src="https://qx-shooz.myshopify.com/cdn/shop/files/product-3_be4a38ab-621f-46d5-a126-3488687e10f6.jpg?v=1731311211&width=150" className="w-18 h-18 object-contain" />
+                            <div>
+                                <h3 className="font-medium">Classic Leather Sneakers</h3>
+                                <p className="text-sm text-gray-500">$21.00</p>
+                            </div>
+                        </div>
+
+                        {/* Card 3 */}
+                        <div className="flex items-center gap-4 border-b border-gray-300 pb-4">
+                            <img src="https://qx-shooz.myshopify.com/cdn/shop/files/product-3_be4a38ab-621f-46d5-a126-3488687e10f6.jpg?v=1731311211&width=150" className="w-18 h-18 object-contain" />
+                            <div>
+                                <h3 className="font-medium">Classic Leather Sneakers</h3>
+                                <p className="text-sm text-gray-500">$21.00</p>
                             </div>
                         </div>
                     </div>
