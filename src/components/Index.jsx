@@ -731,6 +731,67 @@ const Index = () => {
                     </div>
                 </div>
             </section>
+
+            {/* Save Big Section */}
+            <section className='py-12 md:py-16 lg:py-20 bg-white'>
+                <div className='flex flex-col md:flex-row max-w-7xl mx-auto px-6 gap-8'>
+
+                    {/* Text Content - First on mobile, left on desktop */}
+                    <div className='max-w-2xl flex-col md:text-left text-center order-1 md:order-1'>
+                        <span className="text-black text-[10px] font-medium uppercase tracking-[0.3em] mb-5 block">
+                            OUR MOST POPULAR STYLES
+                        </span>
+                        <h2 className="text-3xl md:text-5xl font-medium text-black mb-5">
+                            Save big on shoes <br />
+                            from last season
+                        </h2>
+                        <p className="text-black text-sm mt-5">
+                            Morbi natoque id finibus natoque sapien turpis elementum maximus. Sociosqu auctor a urna consequat laoreet nisi accumsan magna. Adipiscing vulputate nec euismod, a aliquam enim. Mi facilisi ex est habitant lacus sagittis vitae.
+                        </p>
+                        <p className="text-black text-sm mt-5">
+                            Molestie dolor mus vitae penatibus sed lectus convallis ut neque. Leo elementum euismod penatibus cras sociosqu aliquet tellus.
+                        </p>
+                        <button className="mt-6 inline-flex items-center gap-2 bg-[#C44D5E] hover:bg-black text-white text-xs font-bold px-8 py-4 rounded-sm transition-all duration-300 cursor-pointer uppercase tracking-wider">
+                            Shop Now
+                            <FiArrowRight className="text-lg" />
+                        </button>
+                    </div>
+
+                    {/* Image - Second on mobile, right on desktop */}
+                    <div className="flex-1 order-2 md:order-2">
+                        <img src="https://qx-shooz.myshopify.com/cdn/shop/files/video-pic.png?v=1731407733&width=720" alt="Save Big" className="w-full h-full object-cover" />
+                    </div>
+                </div>
+            </section>
+
+            {/* Discover Our Stores: Your Local Shoe Haven Div */}
+            <div className="w-full py-12 md:h-20 md:py-0 flex items-center justify-center px-6 sm:px-12 bg-linear-to-r from-[#7b6cb8] via-[#7a4c8e] to-[#b4444a]">
+                <div className='flex flex-col md:flex-row items-center justify-center md:justify-between max-w-7xl mx-auto px-6 gap-6 md:gap-8 w-full text-center md:text-left'>
+                    <p className="text-white text-sm sm:text-base font-medium">
+                        Discover Our Stores: Your<br className="md:hidden" /> Local Shoe Haven
+                    </p>
+                    <button className="bg-[#2f3c7e] hover:bg-[#24306b] text-white text-xs sm:text-sm font-semibold px-6 py-3 rounded">
+                        FIND STORE
+                    </button>
+                </div>
+            </div>
+
+            {/* Customer Feedback Section */}
+            <section className="py-12 md:py-16 lg:py-15 bg-[#F9F9F9]">
+                <div className="max-w-7xl mx-auto px-6">
+
+                    {/* Section Header */}
+                    <div className="text-center mb-10">
+                        <h2 className="text-xl md:text-4xl font-medium text-gray-900 mb-4">
+                            Customer Feedback Highlights
+                        </h2>
+                        <p className="text-gray-500 text-sm max-w-md mx-auto">
+                            Laoreet ridiculus congue magna malesuada <br />
+                            phasellus condimentum taciti mus primis.
+                        </p>
+                    </div>
+                </div>
+            </section>
         </>
     );
 };
