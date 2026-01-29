@@ -148,6 +148,20 @@ const tabs = [
 
 const Index = () => {
     const [activeTab, setActiveTab] = useState('featured');
+
+    const companies = [
+        "penomé",
+        "POWER",
+        "CONNECT",
+        "voqoda",
+        "intrum",
+        "Renové",
+        "ELEVATE",
+        "ZAVANA",
+        "RIVAL",
+        "vol.me",
+    ];
+
     return (
         <>
             <Header />
@@ -789,6 +803,20 @@ const Index = () => {
                             Laoreet ridiculus congue magna malesuada <br />
                             phasellus condimentum taciti mus primis.
                         </p>
+                    </div>
+
+                    {/* Feedback Cards */}
+                    <div className="py-10">
+                        <div className="max-w-6xl mx-auto grid grid-cols-5 gap-6 text-center">
+                            {companies.map((name, index) => (
+                                <div
+                                    key={index}
+                                    className="py-6 bg-gray-50 rounded-md font-semibold text-gray-400 text-lg tracking-wide hover:text-black transition duration-300 cursor-pointer"
+                                >
+                                    {name}
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
