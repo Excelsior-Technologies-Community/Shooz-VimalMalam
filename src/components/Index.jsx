@@ -4,6 +4,7 @@ import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { FiArrowRight } from 'react-icons/fi';
+import { FaRegComment } from "react-icons/fa";
 import { FiShoppingCart, FiEye, FiHeart } from 'react-icons/fi';
 import { TbArrowsExchange2 } from 'react-icons/tb';
 import Header from './Header.jsx';
@@ -148,19 +149,6 @@ const tabs = [
 
 const Index = () => {
     const [activeTab, setActiveTab] = useState('featured');
-
-    const companies = [
-        "penomé",
-        "POWER",
-        "CONNECT",
-        "voqoda",
-        "intrum",
-        "Renové",
-        "ELEVATE",
-        "ZAVANA",
-        "RIVAL",
-        "vol.me",
-    ];
 
     return (
         <>
@@ -796,7 +784,7 @@ const Index = () => {
 
                     {/* Section Header */}
                     <div className="text-center mb-10">
-                        <h2 className="text-xl md:text-4xl font-medium text-gray-900 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-medium text-gray-900 mb-4">
                             Customer Feedback Highlights
                         </h2>
                         <p className="text-gray-500 text-sm max-w-md mx-auto">
@@ -806,16 +794,174 @@ const Index = () => {
                     </div>
 
                     {/* Feedback Cards */}
-                    <div className="py-10">
-                        <div className="max-w-6xl mx-auto grid grid-cols-5 gap-6 text-center">
-                            {companies.map((name, index) => (
-                                <div
-                                    key={index}
-                                    className="py-6 bg-gray-50 rounded-md font-semibold text-gray-400 text-lg tracking-wide hover:text-black transition duration-300 cursor-pointer"
-                                >
-                                    {name}
+                    <div className="w-full py-12">
+                        {/* ===== DESKTOP VIEW (5 x 2 grid, no slider) ===== */}
+                        <div className="hidden md:grid grid-cols-5 gap-6">
+                            <div className="flex justify-center p-6"><img src="https://qx-shooz.myshopify.com/cdn/shop/files/text-logo-1.png?v=1731499378&width=1920" className="h-20" /></div>
+                            <div className="flex justify-center p-6"><img src="https://qx-shooz.myshopify.com/cdn/shop/files/text-logo-3.png?v=1731499378&width=1920" className="h-20" /></div>
+                            <div className="flex justify-center p-6"><img src="https://qx-shooz.myshopify.com/cdn/shop/files/text-logo-5.png?v=1731499378&width=1920" className="h-20" /></div>
+                            <div className="flex justify-center p-6"><img src="https://qx-shooz.myshopify.com/cdn/shop/files/text-logo-7.png?v=1731499378&width=1920" className="h-20" /></div>
+                            <div className="flex justify-center p-6"><img src="https://qx-shooz.myshopify.com/cdn/shop/files/text-logo-9.png?v=1731499378&width=1920" className="h-20" /></div>
+
+                            <div className="flex justify-center p-6"><img src="https://qx-shooz.myshopify.com/cdn/shop/files/text-logo-2.png?v=1731499378&width=1920" className="h-20" /></div>
+                            <div className="flex justify-center p-6"><img src="https://qx-shooz.myshopify.com/cdn/shop/files/text-logo-11.png?v=1731499961&width=1920" className="h-20" /></div>
+                            <div className="flex justify-center p-6"><img src="https://qx-shooz.myshopify.com/cdn/shop/files/text-logo-6.png?v=1731499378&width=1920" className="h-20" /></div>
+                            <div className="flex justify-center p-6"><img src="https://qx-shooz.myshopify.com/cdn/shop/files/text-logo-8.png?v=1731499379&width=1920" className="h-20" /></div>
+                            <div className="flex justify-center p-6"><img src="https://qx-shooz.myshopify.com/cdn/shop/files/text-logo-10.png?v=1731499378&width=1920" className="h-20" /></div>
+                        </div>
+
+                        {/* ===== MOBILE VIEW (2 x 2 grid with swiper) ===== */}
+                        <div className="md:hidden">
+                            <Swiper
+                                modules={[Pagination]}
+                                spaceBetween={20}
+                                pagination={{ clickable: true }}
+                                slidesPerView={1}
+                            >
+                                {/* Slide 1 */}
+                                <SwiperSlide>
+                                    <div className="grid grid-cols-2 gap-6">
+                                        <div className="flex justify-center p-6 hover:brightness-0 transition"><img src="https://qx-shooz.myshopify.com/cdn/shop/files/text-logo-1.png?v=1731499378&width=1920" className="h-20" /></div>
+                                        <div className="flex justify-center p-6 hover:brightness-0 transition"><img src="https://qx-shooz.myshopify.com/cdn/shop/files/text-logo-3.png?v=1731499378&width=1920" className="h-20" /></div>
+                                        <div className="flex justify-center p-6 hover:brightness-0 transition"><img src="https://qx-shooz.myshopify.com/cdn/shop/files/text-logo-5.png?v=1731499378&width=1920" className="h-20" /></div>
+                                        <div className="flex justify-center p-6 hover:brightness-0 transition"><img src="https://qx-shooz.myshopify.com/cdn/shop/files/text-logo-7.png?v=1731499378&width=1920" className="h-20" /></div>
+                                    </div>
+                                </SwiperSlide>
+
+                                {/* Slide 2 */}
+                                <SwiperSlide>
+                                    <div className="grid grid-cols-2 gap-6">
+                                        <div className="flex justify-center p-6 hover:brightness-0 transition"><img src="https://qx-shooz.myshopify.com/cdn/shop/files/text-logo-9.png?v=1731499378&width=1920" className="h-20" /></div>
+                                        <div className="flex justify-center p-6 hover:brightness-0 transition"><img src="https://qx-shooz.myshopify.com/cdn/shop/files/text-logo-9.png?v=1731499378&width=1920" className="h-20" /></div>
+                                        <div className="flex justify-center p-6 hover:brightness-0 transition"><img src="https://qx-shooz.myshopify.com/cdn/shop/files/text-logo-9.png?v=1731499378&width=1920" className="h-20" /></div>
+                                        <div className="flex justify-center p-6 hover:brightness-0 transition"><img src="https://qx-shooz.myshopify.com/cdn/shop/files/text-logo-6.png?v=1731499378&width=1920" className="h-20" /></div>
+                                    </div>
+                                </SwiperSlide>
+
+                                {/* Slide 3 */}
+                                <SwiperSlide>
+                                    <div className="grid grid-cols-2 gap-6">
+                                        <div className="flex justify-center p-6 hover:brightness-0 transition"><img src="https://qx-shooz.myshopify.com/cdn/shop/files/text-logo-6.png?v=1731499378&width=1920" className="h-20" /></div>
+                                        <div className="flex justify-center p-6 hover:brightness-0 transition"><img src="https://qx-shooz.myshopify.com/cdn/shop/files/text-logo-10.png?v=1731499378&width=1922" className="h-20" /></div>
+                                    </div>
+                                </SwiperSlide>
+                            </Swiper>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Recently Our Post */}
+            <section className='py-12 md:py-16 lg:py-12 bg-white'>
+                <div className="max-w-7xl mx-auto px-6">
+
+                    {/* Section Header */}
+                    <div className="text-left mb-10">
+                        <span className="text-gray-500 text-[10px] font-medium uppercase tracking-[0.3em] mb-3 block">
+                            FROM THE BLOG
+                        </span>
+                        <h2 className="text-3xl md:text-5xl font-medium text-black mb-4">
+                            Recently Our Posts
+                        </h2>
+                        <p className="text-gray-500 text-sm max-w-md">
+                            Sit amet conse ctetur adipisicing elit, sed do <br /> eiusmod tempor incididunt ut labore et dolore <br /> magna aliqua.
+                        </p>
+                    </div>
+
+                    {/* Blog Post Cards */}
+                    <div className="flex flex-col lg:flex-row gap-8">
+
+                        {/* LEFT BIG CARD */}
+                        <div className="lg:w-1/2 relative overflow-hidden group aspect-video">
+                            <img
+                                src="https://qx-shooz.myshopify.com/cdn/shop/articles/blog-2.png?v=1731500928&width=720"
+                                alt="The future of footwear"
+                                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                            />
+
+                            {/* Overlay */}
+                            <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-6">
+                                <div className="flex items-center gap-5 text-sm text-gray-200 mb-2">
+                                    <span>Oct 28, 2024</span>
+                                    <span className="flex items-center gap-1">
+                                        <FaRegComment /> 0 comments
+                                    </span>
                                 </div>
-                            ))}
+                                <h2 className="text-white text-2xl font-semibold">
+                                    The Future Of Footwear: A Look Ahead
+                                </h2>
+                            </div>
+                        </div>
+
+                        {/* RIGHT SMALL CARDS */}
+                        <div className="lg:w-1/2 w-full flex flex-col gap-6">
+
+                            {/* Card 1 */}
+                            <div className="flex gap-4 items-center">
+                                <div className="w-52 h-30 overflow-hidden group">
+                                    <img
+                                        src="https://qx-shooz.myshopify.com/cdn/shop/articles/blog-1.png?v=1731500921&width=360"
+                                        alt=""
+                                        className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                                    />
+                                </div>
+                                <div>
+                                    <div className="flex items-center gap-3 text-sm text-gray-500 mb-1">
+                                        <span>Oct 28, 2024</span>
+                                        <span className="flex items-center gap-1">
+                                            <FaRegComment /> 0 comments
+                                        </span>
+                                    </div>
+                                    <h3 className="font-semibold text-gray-900 hover:text-[#AE3F4F] transition">
+                                        Eco-Friendly Footwear: Sustainable Style
+                                    </h3>
+                                </div>
+                            </div>
+
+                            {/* Card 2 */}
+                            <div className="flex gap-4 items-center">
+                                <div className="w-52 h-30 overflow-hidden group">
+                                    <img
+                                        src="https://qx-shooz.myshopify.com/cdn/shop/articles/blog-6.png?v=1731500962&width=360"
+                                        alt=""
+                                        className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                                    />
+                                </div>
+                                <div>
+                                    <div className="flex items-center gap-3 text-sm text-gray-500 mb-1">
+                                        <span>Oct 17, 2024</span>
+                                        <span className="flex items-center gap-1">
+                                            <FaRegComment /> 0 comments
+                                        </span>
+                                    </div>
+                                    <h3 className="font-semibold text-gray-900 hover:text-[#AE3F4F] transition">
+                                        The Ultimate Guide to Sneaker Care
+                                    </h3>
+                                </div>
+                            </div>
+
+                            {/* Card 3 */}
+                            <div className="flex gap-4 items-center">
+                                <div className="w-52 h-30 overflow-hidden group">
+                                    <img
+                                        src="https://qx-shooz.myshopify.com/cdn/shop/articles/blog-5.png?v=1731500994&width=360"
+                                        alt=""
+                                        className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                                    />
+                                </div>
+                                <div>
+                                    <div className="flex items-center gap-3 text-sm text-gray-500 mb-1">
+                                        <span>Oct 17, 2024</span>
+                                        <span className="flex items-center gap-1">
+                                            <FaRegComment /> 0 comments
+                                        </span>
+                                    </div>
+                                    <h3 className="font-semibold text-gray-900 hover:text-[#AE3F4F] transition">
+                                        How to Style Your Favorite Sneakers
+                                    </h3>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
