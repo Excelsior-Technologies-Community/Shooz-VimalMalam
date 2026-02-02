@@ -152,8 +152,6 @@ const Index = () => {
 
     return (
         <>
-            <Header />
-
             {/* Hero Section with Swiper */}
             <section className="relative">
                 <Swiper
