@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
@@ -7,7 +8,7 @@ import { FiArrowRight } from 'react-icons/fi';
 import { FaRegComment } from "react-icons/fa";
 import { FiShoppingCart, FiEye, FiHeart } from 'react-icons/fi';
 import { TbArrowsExchange2 } from 'react-icons/tb';
-import Header from './Header.jsx';
+import Footer from './Footer.jsx';
 
 // Hero slider data
 const heroSlides = [
@@ -200,10 +201,10 @@ const Index = () => {
                                         </p>
 
                                         {/* CTA Button: Adjusted padding and font weight */}
-                                        <button className="inline-flex items-center gap-2 bg-[#C44D5E] hover:bg-[black] text-white text-xs md:text-sm font-bold px-8 py-4 rounded-sm transition-all duration-300 cursor-pointer uppercase tracking-wider">
+                                        <Link to="/products" className="inline-flex items-center gap-2 bg-[#C44D5E] hover:bg-[black] text-white text-xs md:text-sm font-bold px-8 py-4 rounded-sm transition-all duration-300 cursor-pointer uppercase tracking-wider">
                                             SHOP NOW
                                             <FiArrowRight className="text-xl" />
-                                        </button>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -964,8 +965,12 @@ const Index = () => {
                     </div>
                 </div>
             </section>
+
+            <Footer />
         </>
+
     );
+
 };
 
 export default Index;
