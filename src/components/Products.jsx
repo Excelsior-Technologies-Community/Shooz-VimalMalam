@@ -9,11 +9,12 @@ import Footer from './Footer.jsx';
 
 // Categories shown in tabs and cards
 const categories = [
+    { id: 0, name: 'Products', count: 42, image: 'https://qx-shooz.myshopify.com/cdn/shop/files/hero-banner.jpg?v=1731045500&width=360' },
     { id: 1, name: 'Athletic Footwear', count: 8, image: 'https://qx-shooz.myshopify.com/cdn/shop/collections/col-5.png?v=1731658002&width=360' },
-    { id: 2, name: 'Boots for Every Occasion', count: 8, image: 'https://qx-shooz.myshopify.com/cdn/shop/files/five-col-banner-1.png?v=1731045532&width=360' },
+    { id: 2, name: 'Boots for Every Occasion', count: 8, image: 'https://qx-shooz.myshopify.com/cdn/shop/collections/col-4.png?v=1731657987&width=360' },
     { id: 3, name: 'Luxury Leather Shoes', count: 8, image: 'https://qx-shooz.myshopify.com/cdn/shop/collections/col-6.png?v=1731658012&width=360' },
     { id: 4, name: 'Sandals & Slides', count: 8, image: 'https://qx-shooz.myshopify.com/cdn/shop/collections/col-2.png?v=1731657969&width=360' },
-    { id: 5, name: "Sneakerhead's Haven", count: 10, image: 'https://qx-shooz.myshopify.com/cdn/shop/files/five-col-banner-3.png?v=1731045526&width=360' },
+    { id: 5, name: "Sneakerhead's Haven", count: 10, image: 'https://qx-shooz.myshopify.com/cdn/shop/collections/col-3.png?v=1731657979&width=360' }
 ];
 
 // ============================================
@@ -22,68 +23,69 @@ const categories = [
 
 // Athletic Footwear - 8 products
 const athleticFootwear = [
-    { id: 1, name: 'Classic White Tennis Sneakers', brand: 'SportyFeet', price: 25.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-4_a9f5532a-47cd-4f32-8958-57ee765f0a27.jpg?v=1731311278&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-19_323f61e6-cfd6-4407-823a-273f154d188c.jpg?v=1731311295&width=720' },
-    { id: 2, name: 'Sport Flex Running Shoes', brand: 'AthletePro', price: 32.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-3_be4a38ab-621f-46d5-a126-3488687e10f6.jpg?v=1731311211&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-26_a72ab182-4323-4754-aa41-d64401571e17.jpg?v=1731311225&width=720' },
-    { id: 3, name: 'Urban Runner Pro', brand: 'SpeedStep', price: 35.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-7_bf9fee80-650d-4775-a219-0eaccf66d47b.jpg?v=1731311538&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-19_49ae4265-2610-48a8-b934-1a24b6136832.jpg?v=1731311550&width=720' },
-    { id: 4, name: 'Lightweight Gym Trainers', brand: 'FitKick', price: 28.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-17.jpg?v=1731315215&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-23_8eeee338-7bad-4c2b-b296-6804d886a41a.jpg?v=1731315325&width=720' },
-    { id: 5, name: 'Marathon Performance Shoes', brand: 'RunElite', price: 45.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-4_a9f5532a-47cd-4f32-8958-57ee765f0a27.jpg?v=1731311278&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-19_323f61e6-cfd6-4407-823a-273f154d188c.jpg?v=1731311295&width=720' },
-    { id: 6, name: 'Cross Training Sneakers', brand: 'PowerMove', price: 38.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-3_be4a38ab-621f-46d5-a126-3488687e10f6.jpg?v=1731311211&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-26_a72ab182-4323-4754-aa41-d64401571e17.jpg?v=1731311225&width=720' },
-    { id: 7, name: 'Basketball Court Shoes', brand: 'HoopStar', price: 55.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-7_bf9fee80-650d-4775-a219-0eaccf66d47b.jpg?v=1731311538&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-19_49ae4265-2610-48a8-b934-1a24b6136832.jpg?v=1731311550&width=720' },
-    { id: 8, name: 'Tennis Pro Sneakers', brand: 'CourtKing', price: 42.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-17.jpg?v=1731315215&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-23_8eeee338-7bad-4c2b-b296-6804d886a41a.jpg?v=1731315325&width=720' },
+    { id: 1, name: 'Classic White Tennis Sneakers', brand: 'SportyFeet', price: 21.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-3_be4a38ab-621f-46d5-a126-3488687e10f6.jpg?v=1731311211&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-26_a72ab182-4323-4754-aa41-d64401571e17.jpg?v=1731311225&width=720' },
+    { id: 2, name: 'Cushioned Trail Running Shoes', brand: 'TrailGear', price: 15.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-5_d3ebfc44-e7bd-4fa9-8459-4fc99b71cacf.jpg?v=1731311341&width=360', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-18_31b99edb-0192-4e99-a026-cbd70e3a5624.jpg?v=1731311357&width=360' },
+    { id: 3, name: 'High-Top Canvas Sneakers', brand: 'TrendyFeet', price: 25.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-7_bf9fee80-650d-4775-a219-0eaccf66d47b.jpg?v=1731311538&width=360', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-19_49ae4265-2610-48a8-b934-1a24b6136832.jpg?v=1731311550&width=360' },
+    { id: 4, name: 'Lightweight Running Shoes', brand: 'SprintMax', price: 20.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-8_c70f2fa3-a720-4f73-a2b0-0e0e01967d19.jpg?v=1731311653&width=360', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-21_3ab22edc-32aa-4831-beb5-7ff416b17834.jpg?v=1731311666&width=360', outOfStock: true },
+    { id: 5, name: 'Slip-Resistant Work Shoes', brand: 'ProSteps', price: 20.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-10_aa707d79-f5b1-4b80-8308-7849352cb1d6.jpg?v=1731314834&width=360', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-22_8479de23-bf7c-4771-84c2-90291de8bdfa.jpg?v=1731314850&width=360' },
+    { id: 6, name: 'Soft Leather Moccasins', brand: 'ComfortCreek', price: 25.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-12_560514e6-9f15-4d62-aa87-e2863080cc21.jpg?v=1731314902&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-24_8fe577f2-dcbd-47da-8b42-d1311be6070e.jpg?v=1731314917&width=720' },
+    { id: 7, name: 'Vegan Leather Combat Boots', brand: 'EcoStride', price: 25.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-15_eeedf8cf-f93a-488c-9c0b-e62716ede97c.jpg?v=1731315192&width=360', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-17.jpg?v=1731315215&width=360' },
+    { id: 8, name: 'Vintage Suede Loafers', brand: 'RetroSole', price: 25.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-16_e04d477d-efdc-4ec6-b50b-c2988e78b8a5.jpg?v=1731315204&width=360', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-20_e8528337-5425-4244-a682-7632fa76a3a0.jpg?v=1731315325&width=360', outOfStock: true },
 ];
 
 // Boots for Every Occasion - 8 products
 const bootsProducts = [
-    { id: 9, name: 'Waterproof Hiking Boots', brand: 'TrailGear', price: 65.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-17.jpg?v=1731315215&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-23_8eeee338-7bad-4c2b-b296-6804d886a41a.jpg?v=1731315325&width=720', hasColorOptions: true },
-    { id: 10, name: 'Chelsea Ankle Boots', brand: 'UrbanStyle', price: 58.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-4_a9f5532a-47cd-4f32-8958-57ee765f0a27.jpg?v=1731311278&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-19_323f61e6-cfd6-4407-823a-273f154d188c.jpg?v=1731311295&width=720' },
-    { id: 11, name: 'Combat Style Boots', brand: 'ToughWear', price: 72.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-3_be4a38ab-621f-46d5-a126-3488687e10f6.jpg?v=1731311211&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-26_a72ab182-4323-4754-aa41-d64401571e17.jpg?v=1731311225&width=720' },
-    { id: 12, name: 'Winter Snow Boots', brand: 'FrostGuard', price: 85.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-7_bf9fee80-650d-4775-a219-0eaccf66d47b.jpg?v=1731311538&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-19_49ae4265-2610-48a8-b934-1a24b6136832.jpg?v=1731311550&width=720', hasColorOptions: true },
-    { id: 13, name: 'Work Safety Boots', brand: 'SafeStep', price: 78.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-17.jpg?v=1731315215&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-23_8eeee338-7bad-4c2b-b296-6804d886a41a.jpg?v=1731315325&width=720' },
-    { id: 14, name: 'Desert Chukka Boots', brand: 'SandWalker', price: 62.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-4_a9f5532a-47cd-4f32-8958-57ee765f0a27.jpg?v=1731311278&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-19_323f61e6-cfd6-4407-823a-273f154d188c.jpg?v=1731311295&width=720' },
-    { id: 15, name: 'Motorcycle Riding Boots', brand: 'RiderPro', price: 95.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-3_be4a38ab-621f-46d5-a126-3488687e10f6.jpg?v=1731311211&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-26_a72ab182-4323-4754-aa41-d64401571e17.jpg?v=1731311225&width=720' },
-    { id: 16, name: 'Casual Lace-Up Boots', brand: 'DayWear', price: 55.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-7_bf9fee80-650d-4775-a219-0eaccf66d47b.jpg?v=1731311538&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-19_49ae4265-2610-48a8-b934-1a24b6136832.jpg?v=1731311550&width=720' },
+    { id: 9, name: 'Breathable Mesh Slip-Ons', brand: 'AirWalk', price: 25.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-1_831d6162-6f44-4896-ac4c-88eb8a35a6a9.jpg?v=1731310932&width=360', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-18_be1e3b54-5764-4f9d-b77d-f23718b8bd6f.jpg?v=1731310946&width=360' },
+    { id: 10, name: 'Chunky Platform Sandals', brand: 'BoldWalk', price: 25.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-2_f21b4635-7aa2-414f-b44c-6ce8171394ed.jpg?v=1731310979&width=360', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-22.jpg?v=1731310991&width=360' },
+    { id: 11, name: 'Classic Leather Sneakers', brand: 'UrbanStep', price: 21.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-3_be4a38ab-621f-46d5-a126-3488687e10f6.jpg?v=1731311211&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-26_a72ab182-4323-4754-aa41-d64401571e17.jpg?v=1731311225&width=720' },
+    { id: 12, name: 'Classic White Tennis Sneakers', brand: 'SportyFeet', price: 25.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-4_a9f5532a-47cd-4f32-8958-57ee765f0a27.jpg?v=1731311278&width=360', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-19_323f61e6-cfd6-4407-823a-273f154d188c.jpg?v=1731311295&width=360', },
+    { id: 13, name: 'Cushioned Trail Running Shoes', brand: 'TrailGear', price: 15.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-5_d3ebfc44-e7bd-4fa9-8459-4fc99b71cacf.jpg?v=1731311341&width=360', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-18_31b99edb-0192-4e99-a026-cbd70e3a5624.jpg?v=1731311357&width=360' },
+    { id: 14, name: 'Elegant Block Heel Pumps', brand: 'LuxeFeet', price: 15.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-6_dea7fe47-b8a8-460f-9795-9490b1d9144e.jpg?v=1731311466&width=360', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-23_fdf5f73d-c3b8-465f-b59d-a8e6afc8e7b9.jpg?v=1731311481&width=360' },
+    { id: 15, name: 'High-Top Canvas Sneakers', brand: 'TrendyFeet', price: 25.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-7_bf9fee80-650d-4775-a219-0eaccf66d47b.jpg?v=1731311538&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-19_49ae4265-2610-48a8-b934-1a24b6136832.jpg?v=1731311550&width=720' },
+    { id: 16, name: 'Lightweight Running Shoes', brand: 'SprintMax', price: 0.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-8_c70f2fa3-a720-4f73-a2b0-0e0e01967d19.jpg?v=1731311653&width=360', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-21_3ab22edc-32aa-4831-beb5-7ff416b17834.jpg?v=1731311666&width=360', outOfStock: true },
 ];
 
 // Luxury Leather Shoes - 8 products
 const luxuryLeatherShoes = [
-    { id: 17, name: 'Classic Oxford Shoes', brand: 'FormalFit', price: 120.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-7_bf9fee80-650d-4775-a219-0eaccf66d47b.jpg?v=1731311538&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-19_49ae4265-2610-48a8-b934-1a24b6136832.jpg?v=1731311550&width=720' },
-    { id: 18, name: 'Italian Derby Shoes', brand: 'LuxStep', price: 145.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-4_a9f5532a-47cd-4f32-8958-57ee765f0a27.jpg?v=1731311278&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-19_323f61e6-cfd6-4407-823a-273f154d188c.jpg?v=1731311295&width=720' },
-    { id: 19, name: 'Monk Strap Loafers', brand: 'Elegance', price: 135.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-3_be4a38ab-621f-46d5-a126-3488687e10f6.jpg?v=1731311211&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-26_a72ab182-4323-4754-aa41-d64401571e17.jpg?v=1731311225&width=720' },
-    { id: 20, name: 'Brogue Wingtip Shoes', brand: 'ClassicCraft', price: 155.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-17.jpg?v=1731315215&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-23_8eeee338-7bad-4c2b-b296-6804d886a41a.jpg?v=1731315325&width=720' },
-    { id: 21, name: 'Penny Loafers', brand: 'GentleStep', price: 110.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-4_a9f5532a-47cd-4f32-8958-57ee765f0a27.jpg?v=1731311278&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-19_323f61e6-cfd6-4407-823a-273f154d188c.jpg?v=1731311295&width=720' },
-    { id: 22, name: 'Cap Toe Oxfords', brand: 'Executive', price: 165.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-7_bf9fee80-650d-4775-a219-0eaccf66d47b.jpg?v=1731311538&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-19_49ae4265-2610-48a8-b934-1a24b6136832.jpg?v=1731311550&width=720' },
-    { id: 23, name: 'Tassel Loafers', brand: 'Refined', price: 125.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-3_be4a38ab-621f-46d5-a126-3488687e10f6.jpg?v=1731311211&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-26_a72ab182-4323-4754-aa41-d64401571e17.jpg?v=1731311225&width=720' },
-    { id: 24, name: 'Wholecut Dress Shoes', brand: 'PrimeLeather', price: 180.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-17.jpg?v=1731315215&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-23_8eeee338-7bad-4c2b-b296-6804d886a41a.jpg?v=1731315325&width=720' },
+    { id: 17, name: 'Classic Oxford Shoes', brand: 'LuxeFeet', price: 25.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-7_bf9fee80-650d-4775-a219-0eaccf66d47b.jpg?v=1731311538&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-19_49ae4265-2610-48a8-b934-1a24b6136832.jpg?v=1731311550&width=720' },
+    { id: 18, name: 'Italian Derby Shoes', brand: 'ProStep', price: 20.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-4_a9f5532a-47cd-4f32-8958-57ee765f0a27.jpg?v=1731311278&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-19_323f61e6-cfd6-4407-823a-273f154d188c.jpg?v=1731311295&width=720' },
+    { id: 19, name: 'Monk Strap Loafers', brand: 'ComfortCreek', price: 25.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-3_be4a38ab-621f-46d5-a126-3488687e10f6.jpg?v=1731311211&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-26_a72ab182-4323-4754-aa41-d64401571e17.jpg?v=1731311225&width=720' },
+    { id: 20, name: 'Brogue Wingtip Shoes', brand: 'GlamStep', price: 21.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-17.jpg?v=1731315215&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-23_8eeee338-7bad-4c2b-b296-6804d886a41a.jpg?v=1731315325&width=720' },
+    { id: 21, name: 'Penny Loafers', brand: 'CozyStep', price: 25.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-4_a9f5532a-47cd-4f32-8958-57ee765f0a27.jpg?v=1731311278&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-19_323f61e6-cfd6-4407-823a-273f154d188c.jpg?v=1731311295&width=720' },
+    { id: 22, name: 'Cap Toe Oxfords', brand: 'EcoStride', price: 25.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-7_bf9fee80-650d-4775-a219-0eaccf66d47b.jpg?v=1731311538&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-19_49ae4265-2610-48a8-b934-1a24b6136832.jpg?v=1731311550&width=720', outOfStock: true },
+    { id: 23, name: 'Tassel Loafers', brand: 'RetroSole', price: 25.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-3_be4a38ab-621f-46d5-a126-3488687e10f6.jpg?v=1731311211&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-26_a72ab182-4323-4754-aa41-d64401571e17.jpg?v=1731311225&width=720' },
+    { id: 24, name: 'Wholecut Dress Shoes', brand: 'TrailGear', price: 25.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-17.jpg?v=1731315215&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-23_8eeee338-7bad-4c2b-b296-6804d886a41a.jpg?v=1731315325&width=720' },
 ];
 
 // Sandals & Slides - 8 products
 const sandalsSlides = [
-    { id: 25, name: 'Classic Flip Flops', brand: 'BeachLife', price: 15.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-4_a9f5532a-47cd-4f32-8958-57ee765f0a27.jpg?v=1731311278&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-19_323f61e6-cfd6-4407-823a-273f154d188c.jpg?v=1731311295&width=720' },
-    { id: 26, name: 'Sport Slides', brand: 'ActiveComfort', price: 22.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-3_be4a38ab-621f-46d5-a126-3488687e10f6.jpg?v=1731311211&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-26_a72ab182-4323-4754-aa41-d64401571e17.jpg?v=1731311225&width=720' },
-    { id: 27, name: 'Leather Strap Sandals', brand: 'SunWalker', price: 35.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-7_bf9fee80-650d-4775-a219-0eaccf66d47b.jpg?v=1731311538&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-19_49ae4265-2610-48a8-b934-1a24b6136832.jpg?v=1731311550&width=720' },
-    { id: 28, name: 'Comfort Pool Slides', brand: 'AquaFeet', price: 18.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-17.jpg?v=1731315215&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-23_8eeee338-7bad-4c2b-b296-6804d886a41a.jpg?v=1731315325&width=720' },
-    { id: 29, name: 'Gladiator Sandals', brand: 'RomanStyle', price: 42.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-4_a9f5532a-47cd-4f32-8958-57ee765f0a27.jpg?v=1731311278&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-19_323f61e6-cfd6-4407-823a-273f154d188c.jpg?v=1731311295&width=720' },
-    { id: 30, name: 'Birkenstock Style Sandals', brand: 'NatureStep', price: 55.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-3_be4a38ab-621f-46d5-a126-3488687e10f6.jpg?v=1731311211&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-26_a72ab182-4323-4754-aa41-d64401571e17.jpg?v=1731311225&width=720' },
-    { id: 31, name: 'Hiking Sandals', brand: 'TrailReady', price: 48.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-7_bf9fee80-650d-4775-a219-0eaccf66d47b.jpg?v=1731311538&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-19_49ae4265-2610-48a8-b934-1a24b6136832.jpg?v=1731311550&width=720' },
-    { id: 32, name: 'Platform Slides', brand: 'TrendyFeet', price: 28.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-17.jpg?v=1731315215&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-23_8eeee338-7bad-4c2b-b296-6804d886a41a.jpg?v=1731315325&width=720' },
+    { id: 25, name: 'Classic Flip Flops', brand: 'BoldWalk', price: 25.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-4_a9f5532a-47cd-4f32-8958-57ee765f0a27.jpg?v=1731311278&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-19_323f61e6-cfd6-4407-823a-273f154d188c.jpg?v=1731311295&width=720' },
+    { id: 26, name: 'Sport Slides', brand: 'SportyFeet', price: 25.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-3_be4a38ab-621f-46d5-a126-3488687e10f6.jpg?v=1731311211&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-26_a72ab182-4323-4754-aa41-d64401571e17.jpg?v=1731311225&width=720' },
+    { id: 27, name: 'Leather Strap Sandals', brand: 'TrailGear', price: 15.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-7_bf9fee80-650d-4775-a219-0eaccf66d47b.jpg?v=1731311538&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-19_49ae4265-2610-48a8-b934-1a24b6136832.jpg?v=1731311550&width=720' },
+    { id: 28, name: 'Comfort Pool Slides', brand: 'TrendyFeet', price: 25.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-17.jpg?v=1731315215&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-23_8eeee338-7bad-4c2b-b296-6804d886a41a.jpg?v=1731315325&width=720' },
+    { id: 29, name: 'Gladiator Sandals', brand: 'SprintMax', price: 0.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-4_a9f5532a-47cd-4f32-8958-57ee765f0a27.jpg?v=1731311278&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-19_323f61e6-cfd6-4407-823a-273f154d188c.jpg?v=1731311295&width=720', outOfStock: true },
+    { id: 30, name: 'Birkenstock Style Sandals', brand: 'SimplyShoes', price: 25.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-3_be4a38ab-621f-46d5-a126-3488687e10f6.jpg?v=1731311211&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-26_a72ab182-4323-4754-aa41-d64401571e17.jpg?v=1731311225&width=720' },
+    { id: 31, name: 'Hiking Sandals', brand: 'ComfortCreek', price: 25.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-7_bf9fee80-650d-4775-a219-0eaccf66d47b.jpg?v=1731311538&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-19_49ae4265-2610-48a8-b934-1a24b6136832.jpg?v=1731311550&width=720' },
+    { id: 32, name: 'Platform Slides', brand: 'GlamStep', price: 21.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-17.jpg?v=1731315215&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-23_8eeee338-7bad-4c2b-b296-6804d886a41a.jpg?v=1731315325&width=720' },
 ];
 
 // Sneakerhead's Haven - 10 products
 const sneakerheadHaven = [
-    { id: 33, name: 'Retro High Tops', brand: 'VintageKicks', price: 85.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-4_a9f5532a-47cd-4f32-8958-57ee765f0a27.jpg?v=1731311278&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-19_323f61e6-cfd6-4407-823a-273f154d188c.jpg?v=1731311295&width=720', hasColorOptions: true },
-    { id: 34, name: 'Limited Edition Jordans', brand: 'AirLegacy', price: 180.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-3_be4a38ab-621f-46d5-a126-3488687e10f6.jpg?v=1731311211&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-26_a72ab182-4323-4754-aa41-d64401571e17.jpg?v=1731311225&width=720' },
-    { id: 35, name: 'Classic Canvas Sneakers', brand: 'OldSchool', price: 55.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-7_bf9fee80-650d-4775-a219-0eaccf66d47b.jpg?v=1731311538&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-19_49ae4265-2610-48a8-b934-1a24b6136832.jpg?v=1731311550&width=720' },
-    { id: 36, name: 'Chunky Dad Sneakers', brand: 'RetroWave', price: 95.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-17.jpg?v=1731315215&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-23_8eeee338-7bad-4c2b-b296-6804d886a41a.jpg?v=1731315325&width=720', hasColorOptions: true },
-    { id: 37, name: 'Skate Pro Shoes', brand: 'BoardLife', price: 72.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-4_a9f5532a-47cd-4f32-8958-57ee765f0a27.jpg?v=1731311278&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-19_323f61e6-cfd6-4407-823a-273f154d188c.jpg?v=1731311295&width=720' },
-    { id: 38, name: 'Neon Glow Sneakers', brand: 'NightRunner', price: 88.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-3_be4a38ab-621f-46d5-a126-3488687e10f6.jpg?v=1731311211&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-26_a72ab182-4323-4754-aa41-d64401571e17.jpg?v=1731311225&width=720' },
-    { id: 39, name: 'Platform Sneakers', brand: 'HeightBoost', price: 78.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-7_bf9fee80-650d-4775-a219-0eaccf66d47b.jpg?v=1731311538&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-19_49ae4265-2610-48a8-b934-1a24b6136832.jpg?v=1731311550&width=720', hasColorOptions: true },
-    { id: 40, name: 'Minimalist White Sneakers', brand: 'CleanStep', price: 65.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-17.jpg?v=1731315215&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-23_8eeee338-7bad-4c2b-b296-6804d886a41a.jpg?v=1731315325&width=720' },
-    { id: 41, name: 'Colorblock Sneakers', brand: 'PopStyle', price: 82.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-4_a9f5532a-47cd-4f32-8958-57ee765f0a27.jpg?v=1731311278&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-19_323f61e6-cfd6-4407-823a-273f154d188c.jpg?v=1731311295&width=720' },
-    { id: 42, name: 'Luxury Designer Sneakers', brand: 'HighEnd', price: 220.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-3_be4a38ab-621f-46d5-a126-3488687e10f6.jpg?v=1731311211&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-26_a72ab182-4323-4754-aa41-d64401571e17.jpg?v=1731311225&width=720' },
+    { id: 33, name: 'Retro High Tops', brand: 'SportyFeet', price: 25.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-4_a9f5532a-47cd-4f32-8958-57ee765f0a27.jpg?v=1731311278&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-19_323f61e6-cfd6-4407-823a-273f154d188c.jpg?v=1731311295&width=720', },
+    { id: 34, name: 'Limited Edition Jordans', brand: 'TrailGear', price: 25.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-3_be4a38ab-621f-46d5-a126-3488687e10f6.jpg?v=1731311211&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-26_a72ab182-4323-4754-aa41-d64401571e17.jpg?v=1731311225&width=720' },
+    { id: 35, name: 'Classic Canvas Sneakers', brand: 'UrbanStep', price: 21.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-7_bf9fee80-650d-4775-a219-0eaccf66d47b.jpg?v=1731311538&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-19_49ae4265-2610-48a8-b934-1a24b6136832.jpg?v=1731311550&width=720' },
+    { id: 36, name: 'Chunky Dad Sneakers', brand: 'TrendyFeet', price: 25.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-17.jpg?v=1731315215&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-23_8eeee338-7bad-4c2b-b296-6804d886a41a.jpg?v=1731315325&width=720', },
+    { id: 37, name: 'Skate Pro Shoes', brand: 'AirWalk', price: 25.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-4_a9f5532a-47cd-4f32-8958-57ee765f0a27.jpg?v=1731311278&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-19_323f61e6-cfd6-4407-823a-273f154d188c.jpg?v=1731311295&width=720' },
+    { id: 38, name: 'Neon Glow Sneakers', brand: 'LuxeFeet', price: 25.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-3_be4a38ab-621f-46d5-a126-3488687e10f6.jpg?v=1731311211&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-26_a72ab182-4323-4754-aa41-d64401571e17.jpg?v=1731311225&width=720' },
+    { id: 39, name: 'Platform Sneakers', brand: 'BoldWalk', price: 25.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-7_bf9fee80-650d-4775-a219-0eaccf66d47b.jpg?v=1731311538&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-19_49ae4265-2610-48a8-b934-1a24b6136832.jpg?v=1731311550&width=720', },
+    { id: 40, name: 'Minimalist White Sneakers', brand: 'SprintMax', price: 0.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-17.jpg?v=1731315215&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-23_8eeee338-7bad-4c2b-b296-6804d886a41a.jpg?v=1731315325&width=720', outOfStock: true },
+    { id: 41, name: 'Colorblock Sneakers', brand: 'RetroSole', price: 25.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-4_a9f5532a-47cd-4f32-8958-57ee765f0a27.jpg?v=1731311278&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-19_323f61e6-cfd6-4407-823a-273f154d188c.jpg?v=1731311295&width=720' },
+    { id: 42, name: 'Luxury Designer Sneakers', brand: 'EcoStride', price: 25.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-3_be4a38ab-621f-46d5-a126-3488687e10f6.jpg?v=1731311211&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-26_a72ab182-4323-4754-aa41-d64401571e17.jpg?v=1731311225&width=720' },
 ];
 
 // All products organized by category ID (for easy lookup)
 const allProducts = {
+    0: [...athleticFootwear, ...bootsProducts, ...luxuryLeatherShoes, ...sandalsSlides, ...sneakerheadHaven], // All Products
     1: athleticFootwear,      // Athletic Footwear
     2: bootsProducts,         // Boots for Every Occasion
     3: luxuryLeatherShoes,    // Luxury Leather Shoes
@@ -92,24 +94,38 @@ const allProducts = {
 };
 
 
+// Banner images for each category (by category ID)
+const bannerImages = {
+    0: 'https://qx-shooz.myshopify.com/cdn/shop/files/col-2.png?v=1731657939&width=1944',
+    1: 'https://qx-shooz.myshopify.com/cdn/shop/collections/col-5.png?v=1731658002&width=1944',
+    2: 'https://qx-shooz.myshopify.com/cdn/shop/collections/col-4.png?v=1731657987&width=1944',
+    3: 'https://qx-shooz.myshopify.com/cdn/shop/collections/col-6.png?v=1731658012&width=1944',
+    4: 'https://qx-shooz.myshopify.com/cdn/shop/collections/col-2.png?v=1731657969&width=1944',
+    5: 'https://qx-shooz.myshopify.com/cdn/shop/collections/col-3.png?v=1731657979&width=1944',
+};
+
+
 // ============================================
 // SMALL COMPONENTS - Broken into simple parts
 // ============================================
 
-// Hero Banner at the top of page
-function HeroBanner() {
+// Hero Banner at the top of page (changes based on selected category)
+function HeroBanner({ activeCategory }) {
+    // Get current category data
+    const currentCategory = categories.find(cat => cat.id === activeCategory);
+
     return (
         <section className="relative h-[300px] md:h-[350px] overflow-hidden">
             {/* Background Image */}
             <div
-                className="absolute inset-0 bg-cover bg-center"
-                style={{ backgroundImage: `url(https://qx-shooz.myshopify.com/cdn/shop/collections/col-5.png?v=1731658002&width=1944)` }}
+                className="absolute inset-0 bg-cover bg-center transition-all duration-500"
+                style={{ backgroundImage: `url(${bannerImages[activeCategory]})` }}
             />
             {/* Dark Overlay */}
             <div className="absolute inset-0 bg-black/20" />
             {/* Title */}
             <div className="relative z-10 h-full flex items-center justify-center">
-                <h1 className="text-4xl md:text-5xl font-normal text-white">Athletic Footwear</h1>
+                <h1 className="text-4xl md:text-5xl font-normal text-white">{currentCategory?.name}</h1>
             </div>
         </section>
     );
@@ -317,8 +333,8 @@ function SidebarFilter({ title, isOpen, onToggle, children }) {
 // ============================================
 
 function Products() {
-    // State: which category is selected (1-5)
-    const [activeCategory, setActiveCategory] = useState(1);
+    // State: which category is selected (0 = all products, 1-5 = specific categories)
+    const [activeCategory, setActiveCategory] = useState(0);
 
     // State: grid layout ('grid3' = 3 columns, 'grid4' = 4 columns)
     const [gridView, setGridView] = useState('grid4');
@@ -326,13 +342,48 @@ function Products() {
     // State: how products are sorted
     const [sortBy, setSortBy] = useState('alphabetically');
 
-    // State: is sidebar filter open
-    const [filterOpen, setFilterOpen] = useState(true);
+    // State: sidebar filter sections open/closed
+    const [collectionOpen, setCollectionOpen] = useState(true);
+    const [availabilityOpen, setAvailabilityOpen] = useState(true);
+    const [priceOpen, setPriceOpen] = useState(true);
+
+    // State: availability filter (true = show, false = hide)
+    const [showInStock, setShowInStock] = useState(false);
+    const [showOutOfStock, setShowOutOfStock] = useState(false);
+
+    // State: price range filter
+    const [minPrice, setMinPrice] = useState(0);
+    const [maxPrice, setMaxPrice] = useState(25);
+
+    // Get products for current category
+    const categoryProducts = allProducts[activeCategory];
+
+    // Count in stock and out of stock products
+    const inStockCount = categoryProducts.filter(p => !p.outOfStock).length;
+    const outOfStockCount = categoryProducts.filter(p => p.outOfStock).length;
+
+    // Filter products based on availability and price
+    const filteredProducts = categoryProducts.filter(product => {
+        // Availability filter
+        if (showInStock && showOutOfStock) {
+            // Both checked - show all
+        } else if (showInStock && !showOutOfStock) {
+            if (product.outOfStock) return false;
+        } else if (!showInStock && showOutOfStock) {
+            if (!product.outOfStock) return false;
+        }
+        // Neither checked - show all
+
+        // Price filter
+        if (product.price < minPrice || product.price > maxPrice) return false;
+
+        return true;
+    });
 
     return (
         <>
             {/* ========== HERO BANNER ========== */}
-            <HeroBanner />
+            <HeroBanner activeCategory={activeCategory} />
 
 
             {/* ========== CATEGORY TABS ========== */}
@@ -356,7 +407,8 @@ function Products() {
             <section className="py-10 bg-white">
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-                        {categories.map((cat) => (
+                        {/* Only show categories 1-5 as cards, not "Products" (id 0) */}
+                        {categories.filter(cat => cat.id !== 0).map((cat) => (
                             <CategoryCard
                                 key={cat.id}
                                 category={cat}
@@ -413,7 +465,7 @@ function Products() {
                                     <option value="price-high">Price, High to Low</option>
                                 </select>
                             </div>
-                            <span className="text-sm text-gray-600">{allProducts[activeCategory].length} Products</span>
+                            <span className="text-sm text-gray-600">{filteredProducts.length} Products</span>
                         </div>
                     </div>
                 </div>
@@ -426,11 +478,26 @@ function Products() {
                     <div className="flex flex-col md:flex-row gap-8">
 
                         {/* LEFT: Sidebar */}
-                        <aside className="w-full md:w-64 shrink-0">
+                        <aside className="w-full md:w-64 shrink-0 space-y-6">
+                            {/* Clear All Button */}
+                            <button
+                                onClick={() => {
+                                    setActiveCategory(0);
+                                    setShowInStock(false);
+                                    setShowOutOfStock(false);
+                                    setMinPrice(0);
+                                    setMaxPrice(25);
+                                }}
+                                className="text-sm text-gray-500 hover:text-gray-900 underline cursor-pointer"
+                            >
+                                Clear All
+                            </button>
+
+                            {/* Collection Filter */}
                             <SidebarFilter
                                 title="Collection"
-                                isOpen={filterOpen}
-                                onToggle={() => setFilterOpen(!filterOpen)}
+                                isOpen={collectionOpen}
+                                onToggle={() => setCollectionOpen(!collectionOpen)}
                             >
                                 {categories.map((cat) => (
                                     <label key={cat.id} className="flex items-center gap-3 cursor-pointer">
@@ -444,6 +511,78 @@ function Products() {
                                     </label>
                                 ))}
                             </SidebarFilter>
+
+                            {/* Availability Filter */}
+                            <SidebarFilter
+                                title="Availability"
+                                isOpen={availabilityOpen}
+                                onToggle={() => setAvailabilityOpen(!availabilityOpen)}
+                            >
+                                <label className="flex items-center gap-3 cursor-pointer">
+                                    <input
+                                        type="checkbox"
+                                        checked={showInStock}
+                                        onChange={() => setShowInStock(!showInStock)}
+                                        className="w-4 h-4"
+                                    />
+                                    <span className="text-sm text-gray-700">In stock ({inStockCount})</span>
+                                </label>
+                                <label className="flex items-center gap-3 cursor-pointer">
+                                    <input
+                                        type="checkbox"
+                                        checked={showOutOfStock}
+                                        onChange={() => setShowOutOfStock(!showOutOfStock)}
+                                        className="w-4 h-4"
+                                    />
+                                    <span className="text-sm text-gray-700">Out of stock ({outOfStockCount})</span>
+                                </label>
+                            </SidebarFilter>
+
+                            {/* Price Filter */}
+                            <SidebarFilter
+                                title="Price"
+                                isOpen={priceOpen}
+                                onToggle={() => setPriceOpen(!priceOpen)}
+                            >
+                                {/* Simple Range Bar */}
+                                <div className="py-2">
+                                    <div className="relative h-1 bg-gray-200 rounded">
+                                        <div
+                                            className="absolute h-1 bg-gray-800 rounded"
+                                            style={{
+                                                left: `${(minPrice / 25) * 100}%`,
+                                                width: `${((maxPrice - minPrice) / 25) * 100}%`
+                                            }}
+                                        />
+                                    </div>
+                                </div>
+
+                                {/* Price Inputs */}
+                                <div className="flex items-center gap-3 mt-4">
+                                    <div className="flex items-center gap-1">
+                                        <span className="text-sm text-gray-500">$</span>
+                                        <input
+                                            type="number"
+                                            min="0"
+                                            max="25"
+                                            value={minPrice}
+                                            onChange={(e) => setMinPrice(Number(e.target.value))}
+                                            className="w-16 px-2 py-1 border border-gray-300 rounded text-sm text-center"
+                                        />
+                                    </div>
+                                    <div className="flex items-center gap-1">
+                                        <span className="text-sm text-gray-500">$</span>
+                                        <input
+                                            type="number"
+                                            min="0"
+                                            max="25"
+                                            value={maxPrice}
+                                            onChange={(e) => setMaxPrice(Number(e.target.value))}
+                                            className="w-16 px-2 py-1 border border-gray-300 rounded text-sm text-center"
+                                        />
+                                    </div>
+                                </div>
+                            </SidebarFilter>
                         </aside>
 
                         {/* RIGHT: Product Grid */}
@@ -453,7 +592,7 @@ function Products() {
                                 ${gridView === 'grid3' && 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'}
                                 ${gridView === 'grid4' && 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4'}
                             `}>
-                                {allProducts[activeCategory].map((product) => (
+                                {filteredProducts.map((product) => (
                                     <ProductCard key={product.id} product={product} />
                                 ))}
                             </div>
