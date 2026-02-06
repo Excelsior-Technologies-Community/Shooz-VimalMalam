@@ -27,7 +27,7 @@ const athleticFootwear = [
     { id: 2, name: 'Cushioned Trail Running Shoes', brand: 'TrailGear', price: 15.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-5_d3ebfc44-e7bd-4fa9-8459-4fc99b71cacf.jpg?v=1731311341&width=360', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-18_31b99edb-0192-4e99-a026-cbd70e3a5624.jpg?v=1731311357&width=360' },
     { id: 3, name: 'High-Top Canvas Sneakers', brand: 'TrendyFeet', price: 25.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-7_bf9fee80-650d-4775-a219-0eaccf66d47b.jpg?v=1731311538&width=360', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-19_49ae4265-2610-48a8-b934-1a24b6136832.jpg?v=1731311550&width=360' },
     { id: 4, name: 'Lightweight Running Shoes', brand: 'SprintMax', price: 20.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-8_c70f2fa3-a720-4f73-a2b0-0e0e01967d19.jpg?v=1731311653&width=360', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-21_3ab22edc-32aa-4831-beb5-7ff416b17834.jpg?v=1731311666&width=360', outOfStock: true },
-    { id: 5, name: 'Slip-Resistant Work Shoes', brand: 'ProSteps', price: 20.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-10_aa707d79-f5b1-4b80-8308-7849352cb1d6.jpg?v=1731314834&width=360', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-22_8479de23-bf7c-4771-84c2-90291de8bdfa.jpg?v=1731314850&width=360' },
+    { id: 5, name: 'Slip-Resistant Work Shoes', brand: 'ProStep', price: 20.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-10_aa707d79-f5b1-4b80-8308-7849352cb1d6.jpg?v=1731314834&width=360', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-22_8479de23-bf7c-4771-84c2-90291de8bdfa.jpg?v=1731314850&width=360' },
     { id: 6, name: 'Soft Leather Moccasins', brand: 'ComfortCreek', price: 25.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-12_560514e6-9f15-4d62-aa87-e2863080cc21.jpg?v=1731314902&width=720', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-24_8fe577f2-dcbd-47da-8b42-d1311be6070e.jpg?v=1731314917&width=720' },
     { id: 7, name: 'Vegan Leather Combat Boots', brand: 'EcoStride', price: 25.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-15_eeedf8cf-f93a-488c-9c0b-e62716ede97c.jpg?v=1731315192&width=360', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-17.jpg?v=1731315215&width=360' },
     { id: 8, name: 'Vintage Suede Loafers', brand: 'RetroSole', price: 25.00, image1: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-16_e04d477d-efdc-4ec6-b50b-c2988e78b8a5.jpg?v=1731315204&width=360', image2: 'https://qx-shooz.myshopify.com/cdn/shop/files/product-20_e8528337-5425-4244-a682-7632fa76a3a0.jpg?v=1731315325&width=360', outOfStock: true },
@@ -346,10 +346,17 @@ function Products() {
     const [collectionOpen, setCollectionOpen] = useState(true);
     const [availabilityOpen, setAvailabilityOpen] = useState(true);
     const [priceOpen, setPriceOpen] = useState(true);
+    const [brandOpen, setBrandOpen] = useState(true);
 
     // State: availability filter (true = show, false = hide)
     const [showInStock, setShowInStock] = useState(false);
     const [showOutOfStock, setShowOutOfStock] = useState(false);
+
+    // State: brand filter (array of selected brand names)
+    const [selectedBrands, setSelectedBrands] = useState([]);
+
+    // Get all unique brand names from all products
+    const allBrands = [...new Set(allProducts[0].map(p => p.brand))].sort();
 
     // State: price range filter
     const [minPrice, setMinPrice] = useState(0);
@@ -362,7 +369,7 @@ function Products() {
     const inStockCount = categoryProducts.filter(p => !p.outOfStock).length;
     const outOfStockCount = categoryProducts.filter(p => p.outOfStock).length;
 
-    // Filter products based on availability and price
+    // Filter products based on availability, price, and brand
     const filteredProducts = categoryProducts.filter(product => {
         // Availability filter
         if (showInStock && showOutOfStock) {
@@ -376,6 +383,9 @@ function Products() {
 
         // Price filter
         if (product.price < minPrice || product.price > maxPrice) return false;
+
+        // Brand filter
+        if (selectedBrands.length > 0 && !selectedBrands.includes(product.brand)) return false;
 
         return true;
     });
@@ -487,6 +497,7 @@ function Products() {
                                     setShowOutOfStock(false);
                                     setMinPrice(0);
                                     setMaxPrice(25);
+                                    setSelectedBrands([]);
                                 }}
                                 className="text-sm text-gray-500 hover:text-gray-900 underline cursor-pointer"
                             >
@@ -582,6 +593,34 @@ function Products() {
                                         />
                                     </div>
                                 </div>
+                            </SidebarFilter>
+
+                            {/* Brand Filter */}
+                            <SidebarFilter
+                                title="Brand"
+                                isOpen={brandOpen}
+                                onToggle={() => setBrandOpen(!brandOpen)}
+                            >
+                                {allBrands.map((brand) => {
+                                    const count = categoryProducts.filter(p => p.brand === brand).length;
+                                    return (
+                                        <label key={brand} className="flex items-center gap-3 cursor-pointer">
+                                            <input
+                                                type="checkbox"
+                                                checked={selectedBrands.includes(brand)}
+                                                onChange={() => {
+                                                    if (selectedBrands.includes(brand)) {
+                                                        setSelectedBrands(selectedBrands.filter(b => b !== brand));
+                                                    } else {
+                                                        setSelectedBrands([...selectedBrands, brand]);
+                                                    }
+                                                }}
+                                                className="w-4 h-4"
+                                            />
+                                            <span className="text-sm text-gray-700">{brand} ({count})</span>
+                                        </label>
+                                    );
+                                })}
                             </SidebarFilter>
                         </aside>
 
